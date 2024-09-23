@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChannelListHeaderView" customModule="Icewrap_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF3-fh-g7D">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="87"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="selectionButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="PRS-bm-mYY"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="NMP-Eu-v0E">
+                    <rect key="frame" x="15" y="41" width="20" height="15"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="N4H-fO-dBb"/>
+                        <constraint firstAttribute="height" constant="15" id="Rjb-9k-HhW"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-Qz-mCg">
+                    <rect key="frame" x="43" y="10" width="340" height="77"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eYc-Qz-mCg" firstAttribute="leading" secondItem="NMP-Eu-v0E" secondAttribute="trailing" constant="8" id="3Yq-Zh-zAu"/>
+                <constraint firstItem="NMP-Eu-v0E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="7vg-RB-ias"/>
+                <constraint firstAttribute="bottom" secondItem="MF3-fh-g7D" secondAttribute="bottom" id="989-oX-eH1"/>
+                <constraint firstAttribute="bottom" secondItem="eYc-Qz-mCg" secondAttribute="bottom" id="Ab6-lz-YM0"/>
+                <constraint firstItem="NMP-Eu-v0E" firstAttribute="centerY" secondItem="eYc-Qz-mCg" secondAttribute="centerY" id="ZYb-gU-nW1"/>
+                <constraint firstItem="MF3-fh-g7D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZaP-ma-I15"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MF3-fh-g7D" secondAttribute="trailing" id="cft-HQ-HwV"/>
+                <constraint firstItem="eYc-Qz-mCg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="rDY-Du-zPO"/>
+                <constraint firstItem="MF3-fh-g7D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vz5-1u-TR5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eYc-Qz-mCg" secondAttribute="trailing" constant="10" id="wyW-i1-oGU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="channelNameLbl" destination="eYc-Qz-mCg" id="AOu-gy-byi"/>
+                <outlet property="headerArrowImg" destination="NMP-Eu-v0E" id="X4f-DF-7iN"/>
+            </connections>
+            <point key="canvasLocation" x="46.564885496183201" y="201.05633802816902"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="down-arrow" width="512" height="512"/>
+    </resources>
+</document>
